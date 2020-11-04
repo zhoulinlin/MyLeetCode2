@@ -1,4 +1,3 @@
 # MyLeetCode2
-My solutions and ideas
-And something need to be noticed.
+My solutions,ideas and something need to be noticed.
 
