@@ -7,13 +7,44 @@ public class javaTest {
 //        String2IntegerTest();
 //        Roman2IntegerTest();
 //        _14LongestCommonPrefixTest();
-        _15_3SumTest();
+//        _15_3SumTest();
+//        _16_3SumClosestTest();
+//        _17LetterCombinations_of_a_PhoneNumbeTest();
+        _18_4SumTest();
+    }
 
+    public static void _18_4SumTest(){
+
+        _18_4Sum s = new _18_4Sum();
+//        int nums[] = {1,0,-1,0,-2,2};
+//        int target = 0;
+
+        int nums[] = {1,-2,-5,-4,-3,3,3,5};
+        int target = -11;
+        System.out.println("_18_4SumTest:" +s.fourSum(nums,target));
+    }
+
+    public static void _17LetterCombinations_of_a_PhoneNumbeTest(){
+
+        _17LetterCombinations_of_a_PhoneNumbe l = new _17LetterCombinations_of_a_PhoneNumbe();
+//        String digits = "23";
+        String digits = "234";
+        System.out.println("_16_3SumClosest:" +l.letterCombinations(digits));
+    }
+
+    public static void _16_3SumClosestTest(){
+//        int nums[] = {-1,2,1,-4};
+//        int target = 1;
+        int nums[] = {0,1,2};
+        int target = 3;
+        _16_3SumClosest s = new _16_3SumClosest();
+        System.out.println("_16_3SumClosest:" +s.threeSumClosest(nums,target));
     }
 
     public static void _15_3SumTest(){
         _15_3Sum s = new _15_3Sum();
         int nums[] = {-1,0,1,2,-1,-4};
+//        int nums[] = {-2,0,0,2,2};
         System.out.println("_15_3SumTest:" +s.threeSum(nums));
     }
 

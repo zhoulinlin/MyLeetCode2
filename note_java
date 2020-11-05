@@ -1,5 +1,11 @@
-1. StringBuilder instead of string
+1. Using StringBuilder instead of string
 2. Hashmap
 -> Map<Character, Integer> dic = new HashMap<>();
 -> dic.put('I',1);
 -> cur = dic.get(key);--> pro.14
+
+3.pro.15
+Arrays.asList(num1,num2,num3) -> return a fixed-size list backed by the specified array.
+Arrays.sort(nums);  ->This method doesn't return any value.
+Integer.MAX_VALUE
+Integer.MIN_VALUE

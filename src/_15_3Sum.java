@@ -33,38 +33,18 @@ public class _15_3Sum {
         Arrays.sort(nums);
         int pre = nums[0];
         for(int i=0;i<nums.length && nums[i]<= 0;i++){
-
             if( i > 0 && pre == nums[i]){
                 continue;
             }
-            System.out.println("_15_3SumTest find sum:" +(-nums[i]));
-            findsum(0,nums.length-2,-nums[i],arrayRemove(nums,i));
+            findsum(i+1,nums.length-1,-nums[i],nums);
             pre = nums[i];
         }
         return result;
     }
 
-    private int[] arrayRemove(int[]arr,int index){
-
-        if (arr == null || index < 0 || index >= arr.length) {
-            return arr;
-        }
-
-        int[] anotherArray = new int[arr.length - 1];
-
-        for (int i = 0, k = 0; i < arr.length; i++) {
-            if (i == index) {
-                continue;
-            }
-            anotherArray[k++] = arr[i];
-        }
-
-        return anotherArray;
-    }
-
     private void findsum(int left,int right, int sum,int[] nums){
 
-        if(nums[left] >= nums[right]){
+        if(left >= right){
             return;
         }
 
@@ -76,10 +56,15 @@ public class _15_3Sum {
             putResult(nums[left],nums[right],-sum);
             left++;
             right--;
+
+            while (left < right && nums[left] == nums[left - 1])//for avoiding duplicate triplets  ex:{-2,0,0,2,2}
+                left++;
+
         }
         findsum(left,right,sum,nums);
     }
 
+    //can be replaced by Arrays.asList(num1,num2,num3)
     private void putResult(int num1,int num2,int num3){
 
         List<Integer> temp = new ArrayList<>();
