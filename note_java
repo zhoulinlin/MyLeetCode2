@@ -1,0 +1,5 @@
+1. StringBuilder instead of string
+2. Hashmap
+-> Map<Character, Integer> dic = new HashMap<>();
+-> dic.put('I',1);
+-> cur = dic.get(key);--> pro.14

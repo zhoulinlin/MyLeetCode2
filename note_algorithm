@@ -1,0 +1,11 @@
+1 double for loops
+-> two pointer
+-> find two max: keep bigger move smaller
+-> 11.ContainerWithMostWater
+
+2 Greedy algorithm
+-> A Greedy algorithm is an algorithm that makes the best possible decision at the current time;
+-> 12. Integer to Roman -> in this case taking out the largest possible symbol it can.
+
+3 Edge
+-> when input is String[], notice [],[""],["a"],["ab","a"],["flower","flower","flower","flower"]

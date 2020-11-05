@@ -6,8 +6,15 @@ public class javaTest {
 //        REMTest();
 //        String2IntegerTest();
 //        Roman2IntegerTest();
-        _14LongestCommonPrefixTest();
+//        _14LongestCommonPrefixTest();
+        _15_3SumTest();
 
+    }
+
+    public static void _15_3SumTest(){
+        _15_3Sum s = new _15_3Sum();
+        int nums[] = {-1,0,1,2,-1,-4};
+        System.out.println("_15_3SumTest:" +s.threeSum(nums));
     }
 
     public static void _14LongestCommonPrefixTest(){
