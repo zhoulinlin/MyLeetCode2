@@ -33,10 +33,11 @@ public class _15_3Sum {
         Arrays.sort(nums);
         int pre = nums[0];
         for(int i=0;i<nums.length && nums[i]<= 0;i++){
-            System.out.println("_15_3SumTest find sum:" +(-nums[i]));
+
             if( i > 0 && pre == nums[i]){
                 continue;
             }
+            System.out.println("_15_3SumTest find sum:" +(-nums[i]));
             findsum(0,nums.length-2,-nums[i],arrayRemove(nums,i));
             pre = nums[i];
         }
@@ -72,9 +73,9 @@ public class _15_3Sum {
         }else if(nums[left] + nums[right] > sum){
             right--;
         }else {
+            putResult(nums[left],nums[right],-sum);
             left++;
             right--;
-            putResult(nums[left],nums[right],-sum);
         }
         findsum(left,right,sum,nums);
     }
