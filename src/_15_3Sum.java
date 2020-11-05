@@ -37,10 +37,28 @@ public class _15_3Sum {
             if( i > 0 && pre == nums[i]){
                 continue;
             }
-            findsum(0,nums.length-1,-nums[i],nums);
+            findsum(0,nums.length-2,-nums[i],arrayRemove(nums,i));
             pre = nums[i];
         }
         return result;
+    }
+
+    private int[] arrayRemove(int[]arr,int index){
+
+        if (arr == null || index < 0 || index >= arr.length) {
+            return arr;
+        }
+
+        int[] anotherArray = new int[arr.length - 1];
+
+        for (int i = 0, k = 0; i < arr.length; i++) {
+            if (i == index) {
+                continue;
+            }
+            anotherArray[k++] = arr[i];
+        }
+
+        return anotherArray;
     }
 
     private void findsum(int left,int right, int sum,int[] nums){
@@ -51,7 +69,6 @@ public class _15_3Sum {
 
         if(nums[left] + nums[right] < sum){
             left++;
-
         }else if(nums[left] + nums[right] > sum){
             right--;
         }else {
