@@ -18,6 +18,27 @@ public class _22_GenerateParentheses {
     List<String> result = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
+        List<String> ans = new ArrayList();
+        backtrack(ans, "", 0, 0, n);
+        return ans;
+    }
+
+    public void backtrack(List<String> ans, String cur, int open, int close, int max){
+
+        System.out.println("cur:" + cur + "open:" + open + " close:" + close + " max:" + max);
+
+        if (cur.length() == max * 2) {
+            ans.add(cur);
+            return;
+        }
+
+        if (open < max)
+            backtrack(ans, cur+"(", open+1, close, max);
+        if (close < open)
+            backtrack(ans, cur+")", open, close+1, max);
+    }
+
+    public List<String> generateParenthesisq2(int n) {
 
         for(int i=1;i<n;i++){
             result.add(getPureP(i)+getPureP(n-i));

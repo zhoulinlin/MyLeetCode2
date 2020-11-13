@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class javaTest {
 
     public static void main(String[] args) {
@@ -10,7 +12,13 @@ public class javaTest {
 //        _15_3SumTest();
 //        _16_3SumClosestTest();
 //        _17LetterCombinations_of_a_PhoneNumbeTest();
-        _18_4SumTest();
+//        _18_4SumTest();
+        _22_GenerateParenthesesTest();
+    }
+
+    public static void _22_GenerateParenthesesTest(){
+        _22_GenerateParentheses g = new _22_GenerateParentheses();
+        System.out.println("_22_GenerateParenthesesTest:" +g.generateParenthesis(3));
     }
 
     public static void _18_4SumTest(){
