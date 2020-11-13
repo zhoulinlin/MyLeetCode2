@@ -9,3 +9,10 @@ Arrays.asList(num1,num2,num3) -> return a fixed-size list backed by the specifie
 Arrays.sort(nums);  ->This method doesn't return any value.
 Integer.MAX_VALUE
 Integer.MIN_VALUE
+
+4. pro.20
+Stack<Character> stack = new Stack<>();
+stack.push(c);
+stack.pop();
+stack.peek()
+

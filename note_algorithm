@@ -9,3 +9,8 @@
 
 3 Edge
 -> when input is String[], notice [],[""],["a"],["ab","a"],["flower","flower","flower","flower"]
+
+4 Pro. 19 Remove Nth Node From End of List
+-> two pointers move together to calculate the Nth Node From End.
+  We maintain this constant gap by advancing both pointers together until the first pointer arrives past the last node.
+   The second pointer will be pointing at the nnth node counting from the last
