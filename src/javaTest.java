@@ -1,3 +1,5 @@
+import helper.ListNode;
+
 import java.util.List;
 
 public class javaTest {
@@ -13,7 +15,36 @@ public class javaTest {
 //        _16_3SumClosestTest();
 //        _17LetterCombinations_of_a_PhoneNumbeTest();
 //        _18_4SumTest();
-        _22_GenerateParenthesesTest();
+//        _22_GenerateParenthesesTest();
+//        _23_Merge_k_SortedListsTest();
+        _25_ReverseNodes_in_k_GroupTest();
+    }
+    public static void _25_ReverseNodes_in_k_GroupTest(){
+
+        _25_ReverseNodes_in_k_Group r = new _25_ReverseNodes_in_k_Group();
+        ListNode h1 = new ListNode(1);
+        ListNode h2 = new ListNode(2);
+        ListNode h3 = new ListNode(3);
+        ListNode h4 = new ListNode(4);
+        h1.next = h2;
+        h2.next = h3;
+        h3.next = h4;
+
+        ListNode t = r.reverseKGroup(h1,2);
+        while (t != null){
+            System.out.println(t);
+            t=t.next;
+        }
+
+    }
+
+    public static void _23_Merge_k_SortedListsTest(){
+        _23_Merge_k_SortedLists m = new _23_Merge_k_SortedLists();
+        ListNode[] lists = new ListNode[3];
+        lists[0]=null;
+        lists[1]= new ListNode(2);
+        lists[2]= new ListNode(5);
+        System.out.println("_23_Merge_k_SortedListsTest:" +m.mergeKLists(lists));
     }
 
     public static void _22_GenerateParenthesesTest(){
@@ -29,7 +60,7 @@ public class javaTest {
 
         int nums[] = {1,-2,-5,-4,-3,3,3,5};
         int target = -11;
-        System.out.println("_18_4SumTest:" +s.fourSum(nums,target));
+//        System.out.println("_18_4SumTest:" +s.fourSum(nums,target));
     }
 
     public static void _17LetterCombinations_of_a_PhoneNumbeTest(){

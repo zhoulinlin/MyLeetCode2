@@ -14,3 +14,7 @@
 -> two pointers move together to calculate the Nth Node From End.
   We maintain this constant gap by advancing both pointers together until the first pointer arrives past the last node.
    The second pointer will be pointing at the nnth node counting from the last
+
+5 Pro.22 Amazing recursion and backtrack
+
+6 Pro.23 Approach 5: Merge with Divide And Conquer --> merge each pair
