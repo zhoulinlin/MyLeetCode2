@@ -17,18 +17,43 @@ public class javaTest {
 //        _18_4SumTest();
 //        _22_GenerateParenthesesTest();
 //        _23_Merge_k_SortedListsTest();
-        _25_ReverseNodes_in_k_GroupTest();
+//        _25_ReverseNodes_in_k_GroupTest();
+//        _26_RemoveDuplicatesfromSortedArrayTest();
+        _42_TrappingRainWaterTest();
+
     }
+
+    public static void _42_TrappingRainWaterTest(){
+        _42_TrappingRainWater t = new _42_TrappingRainWater();
+//       int nums[] = {0,1,0,2,1,0,1,3,2,1,2,1};
+        int nums[] = {4,2,0,3,2};
+
+        System.out.println("_42_TrappingRainWaterTest:" + t.trap(nums));
+    }
+
+    public static void _26_RemoveDuplicatesfromSortedArrayTest(){
+        _26_RemoveDuplicatesfromSortedArray r = new _26_RemoveDuplicatesfromSortedArray();
+        int nums[] = {1,1,2};
+        r.removeDuplicates(nums);
+        System.out.println("_26_RemoveDuplicatesfromSortedArrayTest:" + r.removeDuplicates(nums));
+    }
+
     public static void _25_ReverseNodes_in_k_GroupTest(){
 
         _25_ReverseNodes_in_k_Group r = new _25_ReverseNodes_in_k_Group();
-        ListNode h1 = new ListNode(1);
-        ListNode h2 = new ListNode(2);
-        ListNode h3 = new ListNode(3);
-        ListNode h4 = new ListNode(4);
+        ListNode h1 = new ListNode(3);
+        ListNode h2 = new ListNode(9);
+        ListNode h3 = new ListNode(6);
+        ListNode h4 = new ListNode(1);
+        ListNode h5 = new ListNode(1);
+        ListNode h6 = new ListNode(4);
+//        ListNode h7 = new ListNode(7);
         h1.next = h2;
         h2.next = h3;
         h3.next = h4;
+        h4.next = h5;
+        h5.next = h6;
+//        h6.next = h7;
 
         ListNode t = r.reverseKGroup(h1,2);
         while (t != null){

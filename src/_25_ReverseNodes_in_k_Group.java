@@ -33,23 +33,38 @@ public class _25_ReverseNodes_in_k_Group {
         ListNode newHead = new ListNode();
         newHead.next = head;
 
-        ListNode temp = newHead;
+        ListNode temp = head;
+        ListNode preTemp = newHead,prehead = newHead,t = null;
 
-        for(int i=1;temp != null && temp.next != null;i++){
+        for(int i=1;temp != null;i++){
+
+            System.out.println("\nreverseKGroup temp:"+temp + " prehead:" + prehead +" t:" + t);
+
             if(i%k == 1){
-                swapOneGroup(temp,k);
+                prehead = preTemp;
+                t = prehead.next;
+            }else if(i%k == 0 && prehead != null){
+                swapOneGroup(prehead,k);
+                temp = t;
             }
+            preTemp = temp;
             temp = temp.next;
         }
 
         return newHead.next;
     }
 
-    private ListNode swapOneGroup(ListNode preHead,int k){
+    private void swapOneGroup(ListNode preHead,int k){
 
-        ListNode left = preHead.next,leftPre = preHead,right = preHead.next,rightPre = preHead;
+        System.out.println("\nswapOneGroup preHead:"+preHead);
+
+        ListNode left,leftPre ,right,rightPre;
 
         for(int i=1;i<=k/2;i++){
+            left = preHead.next;
+            leftPre = preHead;
+            right = preHead.next;
+            rightPre = preHead;
 
             for(int j=1;j<i;j++){
                 leftPre = left;
@@ -65,21 +80,27 @@ public class _25_ReverseNodes_in_k_Group {
             System.out.println("\nswapTwoNodes:");
             printList(preHead);
         }
-
-        return preHead;
     }
 
     private ListNode swapTwoNodes(ListNode left,ListNode leftPre,ListNode right,ListNode rightPre){
 
         System.out.println("\nleft:" +left + " leftPre:" + leftPre + " right:" + right + " rightPre:" + rightPre);
 
-        ListNode leftNext = left.next;
-        ListNode rightNext = right.next;
+        if(left == null || right == null){
+            return leftPre;
+        }
 
-        left.next = rightNext;
-        right.next = leftNext;
-        leftPre.next = right;
-        rightPre.next = left;
+        if(left.next == right){
+            leftPre.next = right;
+            left.next = right.next;
+            right.next = left;
+        }else{
+            ListNode leftNext = left.next;
+            left.next = right.next;
+            right.next = leftNext;
+            leftPre.next = right;
+            rightPre.next = left;
+        }
 
         return leftPre;
     }
@@ -90,5 +111,6 @@ public class _25_ReverseNodes_in_k_Group {
             System.out.print(t);
             t=t.next;
         }
+        System.out.print("\n");
     }
 }
