@@ -16,3 +16,77 @@ stack.push(c);
 stack.pop();
 stack.peek()
 
+5. pro.146
+Create a HashMap--> HashMap<String, String> capitalCities = new HashMap<String, String>();
+Add Items        --> capitalCities.put("England", "London");
+Access an Item   --> capitalCities.get("England");
+Remove an Item   --> capitalCities.remove("England");
+Remove all items --> capitalCities.clear();
+HashMap Size     --> capitalCities.size();
+
+Check if key exists in HashMap --> capitalCities.containsKey("England")
+get value or default --> getOrDefault(key, -1);
+
+Loop Through a HashMap -->
+// Print keys
+for (String i : capitalCities.keySet()) {
+  System.out.println(i);
+}
+// Print values
+for (String i : capitalCities.values()) {
+  System.out.println(i);
+}
+
+LinkedHashMap(https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)
+
+---> LinkedHashMap removeEldestEntry() Method in Java
+used keep a track of whether the map removes any eldest entry from the map.
+So each time a new element is added to the LinkedHashMap,
+the eldest entry is removed from the map. This method is generally invoked
+after the addition of the elements into the map by the use of put() and putall() method.
+
+---> Solution:
+class LRUCache extends LinkedHashMap<Integer, Integer>{
+    private int capacity;
+
+    public LRUCache(int capacity) {
+        super(capacity, 0.75F, true);
+        this.capacity = capacity;
+    }
+
+    public int get(int key) {
+        return super.getOrDefault(key, -1);
+    }
+
+    public void put(int key, int value) {
+        super.put(key, value);
+    }
+
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+        return size() > capacity;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
