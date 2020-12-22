@@ -19,8 +19,15 @@ public class javaTest {
 //        _23_Merge_k_SortedListsTest();
 //        _25_ReverseNodes_in_k_GroupTest();
 //        _26_RemoveDuplicatesfromSortedArrayTest();
-        _42_TrappingRainWaterTest();
+//        _42_TrappingRainWaterTest();
+        _91_DecodeWaysTest();
 
+    }
+
+    public static void _91_DecodeWaysTest(){
+
+        _91_DecodeWays d = new _91_DecodeWays();
+        System.out.println("_91_DecodeWaysTest:" + d.numDecodings("122"));
     }
 
     public static void _42_TrappingRainWaterTest(){
