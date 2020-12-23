@@ -68,6 +68,17 @@ class LRUCache extends LinkedHashMap<Integer, Integer>{
     }
 }
 
+6.Queue
+Queue<Integer> q = new LinkedList<>();
+
+// To remove the head of queue.
+ int removedele = q.remove();
+
+// To view the head of queue
+int head = q.peek();
+
+//Adds elements  to queue
+q.add(i);
 
 
 
