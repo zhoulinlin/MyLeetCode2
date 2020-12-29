@@ -20,8 +20,14 @@ public class javaTest {
 //        _25_ReverseNodes_in_k_GroupTest();
 //        _26_RemoveDuplicatesfromSortedArrayTest();
 //        _42_TrappingRainWaterTest();
-        _91_DecodeWaysTest();
+//        _91_DecodeWaysTest();
+        _273_IntegertoEnglishWords();
+    }
 
+    public static void _273_IntegertoEnglishWords(){
+
+        _273_IntegertoEnglishWords i = new _273_IntegertoEnglishWords();
+        System.out.println("_273_IntegertoEnglishWords:" + i.numberToWords(123));
     }
 
     public static void _91_DecodeWaysTest(){
