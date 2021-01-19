@@ -80,3 +80,30 @@ Runnable r = new Runnable() {
         }
 };
 ```
+### 9.PriorityQueue(pro.253)
+```java
+// Min heap
+    PriorityQueue<Integer> allocator =
+        new PriorityQueue<Integer>(
+            intervals.length,
+            new Comparator<Integer>() {
+              public int compare(Integer a, Integer b) {
+                return a - b;
+              }
+            });
+//using lambada
+Queue<Integer> que = new PriorityQueue<Integer>(intervals.length, (a, b) -> a - b);
+```
+Constructors:<br>
+(1)PriorityQueue<E> pq = new PriorityQueue<E>();<br>
+(2)PriorityQueue<E> pq = new PriorityQueue<E>(Collection<E> c);<br>
+(3)PriorityQueue<E> pq = new PriorityQueue<E>(int initialCapacity);<br>
+(4)PriorityQueue<E> pq = new PriorityQueue(int initialCapacity, Comparator<E> comparator);<br>
+(5)PriorityQueue<E> pq = new PriorityQueue(PriorityQueue<E> c);<br>
+(6)PriorityQueue<E> pq = new PriorityQueue<E>(SortedSet<E> c);<br>
+
+*Example:
+The example below explains the following basic operations of the priority queue.*
+<br>**boolean add(E element):** This method inserts the specified element into this priority queue.
+<br>**public peek():** This method retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+<br>**public poll():** This method retrieves and removes the head of this queue, or returns null if this queue is empty.
